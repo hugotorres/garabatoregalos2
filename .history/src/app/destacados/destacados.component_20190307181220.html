@@ -1,0 +1,51 @@
+<section>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <div class="starred">
+                  <img src="assets/img/skull.png" alt="logo garabato regalos" class="w-25">
+              </div>
+          </div>
+          <div class="carousel-item">
+              <div class="starred">
+                  <img class="d-block w-100" src="assets/img/logo.png" alt="Second slide" class="w-25">
+              </div>
+          </div>
+          <div class="carousel-item">
+              <div class="starred">
+                  <img src="assets/img/garabatos1.jpg" alt="logo garabato regalos" class="d-block w-25">
+              </div>
+          </div>
+          <div class="carousel-item">
+              <div class="starred">
+                  <img src="assets/img/garabatos2.jpg" alt="logo garabato regalos" class="d-block w-25">
+              </div>
+          </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+  </div>
+
+
+</section>
+<div class="grid grid-pad">
+ 
+    <a *ngFor="let hero of heroes" class="col-1-4"
+        routerLink="/detail/{{hero.id}}">
+      <div class="module hero">
+        <h4>{{hero.name}}</h4>
+      </div>
+    </a>
+  </div>

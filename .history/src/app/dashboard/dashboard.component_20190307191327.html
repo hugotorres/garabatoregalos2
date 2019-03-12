@@ -1,0 +1,25 @@
+
+
+   <app-destacados></app-destacados>
+
+   <div class="grid grid-pad">
+ 
+      <div *ngFor="let hero of heroes" class="col-sm-12"
+          routerLink="/categoria/{{hero.id}}">
+       
+          <div class={{hero.name}}>
+           <h3>{{hero.name}}</h3> 
+
+           <div class="col-sm-6"> <img src="asets/img/imagen1.jpg" alt="imagen categoria"></div>
+           <div class="col-sm-6"></div>
+          </div>
+          
+       
+        </div>
+    </div>
+
+
+
+
+
+

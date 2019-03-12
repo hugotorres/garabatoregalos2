@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-g-navigation',
+  templateUrl: './g-navigation.component.html',
+  styleUrls: ['./g-navigation.component.css']
+})
+export class GNavigationComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

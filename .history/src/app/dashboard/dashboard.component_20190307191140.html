@@ -1,0 +1,22 @@
+
+
+   <app-destacados></app-destacados>
+
+   <div class="grid grid-pad">
+ 
+      <div *ngFor="let hero of heroes" class="col-sm-12"
+          routerLink="/categoria/{{hero.id}}">
+       
+          <app-categoria class={{hero.name}}>
+            
+          </app-categoria>
+          
+       
+        </div>
+    </div>
+
+
+
+
+
+
