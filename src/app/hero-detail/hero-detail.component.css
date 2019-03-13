@@ -28,3 +28,11 @@ button:disabled {
   color: #ccc;
   cursor: auto;
 }
+
+.col-sm-4.producto {
+  height: 40vh;
+  border: thin solid #0000001a;
+  padding: 20px;
+  text-align: center;
+  background: #ffffff45;
+}

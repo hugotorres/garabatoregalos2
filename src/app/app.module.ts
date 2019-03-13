@@ -18,6 +18,8 @@ import { MessagesComponent }    from './messages/messages.component';
 import { GNavigationComponent } from './g-navigation/g-navigation.component';
 import { DestacadosComponent } from './destacados/destacados.component';
 import { CategoriaComponent } from './categoria/categoria.component';
+import { FooterComponent } from './footer/footer.component';
+import { SocialMediaComponent } from './social-media/social-media.component';
 
 @NgModule({
   imports: [
@@ -28,9 +30,10 @@ import { CategoriaComponent } from './categoria/categoria.component';
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(
+  /*  HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )
+    */
   ],
   declarations: [
     AppComponent,
@@ -42,7 +45,9 @@ import { CategoriaComponent } from './categoria/categoria.component';
     HeroSearchComponent,
     GNavigationComponent,
     DestacadosComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    FooterComponent,
+    SocialMediaComponent
   ],
   bootstrap: [ AppComponent ]
 })

@@ -1,14 +1,8 @@
-<h2>My Heroes</h2>
+<div class="row container">
 
-<div>
-  <label>Hero name:
-    <input #heroName />
-  </label>
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(heroName.value); heroName.value=''">
-    add
-  </button>
-</div>
+
+<div class="col-sm-5">
+
 
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
@@ -19,3 +13,11 @@
       (click)="delete(hero)">x</button>
   </li>
 </ul>
+</div>
+<div class="col-sm-7">
+<h1>detalle productos categoria</h1>
+
+</div>
+
+  
+</div>

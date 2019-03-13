@@ -1,16 +1,20 @@
+<app-g-navigation></app-g-navigation>
 <div *ngIf="hero" class="row">
-  <div class="container">
-  <h2>{{hero.name | uppercase}}</h2>
-  <div><span>id: </span>{{hero.id}}</div>
-  <div><span>tag: </span>{{hero.tag}}</div>
-  <div>
-   
-      <div>{{hero.name}}</div>
-      <div *ngFor="let producto of hero.productos">
-        {{producto.name}} -- {{producto.image}} -- {{producto.price}}
+  <div class="container ">
+    <h2 class="text-center">{{hero.name | uppercase}}</h2>
+    <div class="row">
+      <div *ngFor="let producto of hero.productos" class="col-sm-4 producto">
+        <div class="nombre-producto">{{producto.name}}</div>
+        <div class="imagen-producto">
+          {{producto.image}}
+        </div>
+        <div class="precio">
+          {{producto.price}}
+        </div>
       </div>
-    
+    </div>
+    <button (click)="goBack()">go back</button>
   </div>
-  <button (click)="goBack()">go back</button>
+  {{hero | json}}
 </div>
-</div>
+<app-footer></app-footer>

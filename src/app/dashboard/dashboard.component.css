@@ -1,5 +1,15 @@
 /* DashboardComponent's private CSS styles */
-[class*='col-'] {
+app-dashboard{
+ /* transition: all 2s;*/
+ margin-top: 20px;
+
+}
+.navigation .row {
+  padding: 0px;
+}
+
+
+[class*='col-']{
   float: left;
   padding-right: 20px;
   padding-bottom: 20px;
@@ -20,20 +30,13 @@ h3 {
   float: right;
 }
 .col-sm-12:nth-child(even)  {
-   background: rgba(0, 0, 0, 0.2); 
+  border-left:thin solid grey; 
    
 }
 .col-sm-12:nth-child(odd)  {
-border:thin solid white;
-}
-.col-sm-6.imagen-principal-categoria:hover {
-  margin-left: 0px;
-  transition: all 2s;
+  border-right:thin solid grey;
 }
 
-.col-sm-6.imagen-principal-categoria {
-  padding-left: 0;
-}
 /******************/
 a {
   text-decoration: none;

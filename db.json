@@ -1,138 +1,207 @@
-{"categorias" : [{
-    "id": 11,
-    "name": "Alcancias",
-    "tag": "stuff",
-    "imagen": "image7.png",
-    "productos": [{
-        "id": "alcaazul",
-        "name": "alcancia Azul",
-        "image": "alca-imagen1.jpg",
-        "price": "$25000",
-        "images": ["uno.jpg", "dos.jpg"]
-      },
-      {
-        "id": "alcaazul2",
-        "name": "alcancia Azul2",
-        "image": "alca-imagen2.jpg",
-        "price": "$25000",
-        "images": ["uno.jpg", "dos.jpg"]
-      },
-      {
-        "id": "alcaazul3",
-        "name": "alcancia Azul3",
-        "image": "alca-imagen3.jpg",
-        "price": "$25000",
-        "images": ["uno.jpg", "dos.jpg"]
-      }
-    ]
-  },
-  {
-    "id": 12,
-    "name": "Materas",
-    "tag": "stuff",
-    "imagen": "elefanteazul2.jpeg",
-    "productos": [{
-        "id": "mateaverde",
-        "name": "matera Verde",
-        "image": "imagen1.jpg",
-        "price": "$25000",
-        "images": ["uno.jpg", "dos.jpg"]
-      },
-      {
-        "id": "alcaazul",
-        "name": "alcancia Azul",
-        "image": "alca-imagen1.jpg",
-        "price": "$25000",
-        "images": ["uno.jpg", "dos.jpg"]
-      },
-      {
-        "id": "alcaazul2",
-        "name": "alcancia Azul2",
-        "image": "alca-imagen2.jpg",
-        "price": "$25000",
-        "images": ["uno.jpg", "dos.jpg"]
-      },
-      {
-        "id": "alcaazul3",
-        "name": "alcancia Azul3",
-        "image": "alca-imagen3.jpg",
-        "price": "$25000",
-        "images": ["uno.jpg", "dos.jpg"]
-      }
+{
+  "categorias": [{
+      "id": 11,
+      "name": "Alcancias",
+      "tag": "stuff",
+      "imagen": "image8.png",
+      "descripcion": "No cubre garantía por mala manipulación es decir por: Golpes, si te saltas las instrucciones de uso, si modificas o pones algo adicional al producto Después de recibir tu pedido tienes 5 días para hacernos saber cuál es el daño que presenta tu artículo, te puedes comunicar con nosotros por medio de WhatsApp, correo electrónico o llamada.",
+      "productos": [{
+          "id": "alcaazul",
+          "name": "alcancia Azul",
+          "image": "alca-imagen1.jpg",
+          "price": "$25000",
+          "images": [
+            "uno.jpg",
+            "dos.jpg"
+          ]
+        },
+        {
+          "id": "alcaazul2",
+          "name": "alcancia Azul2",
+          "image": "alca-imagen2.jpg",
+          "price": "$25000",
+          "images": [
+            "uno.jpg",
+            "dos.jpg"
+          ]
+        },
+        {
+          "id": "alcaazul3",
+          "name": "alcancia Azul3",
+          "image": "alca-imagen3.jpg",
+          "price": "$25000",
+          "images": [
+            "uno.jpg",
+            "dos.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Materas",
+      "tag": "stuff",
+      "imagen": "image1.png",
+      "descripcion": "No cubre garantía por mala manipulación es decir por: Golpes, si te saltas las instrucciones de uso, si modificas o pones algo adicional al producto Después de recibir tu pedido tienes 5 días para hacernos saber cuál es el daño que presenta tu artículo, te puedes comunicar con nosotros por medio de WhatsApp, correo electrónico o llamada.",
 
-    ]
-  },
-  {
-    "id": 13,
-    "name": "Portalapices",
-    "tag": "stuff",
-    "imagen": "portalapices.jpg",
-    "productos": [{
-        "id": "portaroja",
-        "name": "portalapices Roja",
-        "image": "imagen1.jpg",
-        "price": "$25000",
-        "images": ["uno.jpg", "dos.jpg"]
-      },
-      {
-        "id": "alcaazul",
-        "name": "alcancia Azul",
-        "image": "alca-imagen1.jpg",
-        "price": "$25000",
-        "images": ["uno.jpg", "dos.jpg"]
-      },
-      {
-        "id": "alcaazul2",
-        "name": "alcancia Azul2",
-        "image": "alca-imagen2.jpg",
-        "price": "$25000",
-        "images": ["uno.jpg", "dos.jpg"]
-      },
-      {
-        "id": "alcaazul3",
-        "name": "alcancia Azul3",
-        "image": "alca-imagen3.jpg",
-        "price": "$25000",
-        "images": ["uno.jpg", "dos.jpg"]
-      }
+      "productos": [{
+          "id": "mateaverde",
+          "name": "matera Verde",
+          "image": "imagen1.jpg",
+          "price": "$25000",
+          "images": [
+            "uno.jpg",
+            "dos.jpg"
+          ]
+        },
+        {
+          "id": "alcaazul",
+          "name": "alcancia Azul",
+          "image": "alca-imagen1.jpg",
+          "price": "$25000",
+          "images": [
+            "uno.jpg",
+            "dos.jpg"
+          ]
+        },
+        {
+          "id": "alcaazul2",
+          "name": "alcancia Azul2",
+          "image": "alca-imagen2.jpg",
+          "price": "$25000",
+          "images": [
+            "uno.jpg",
+            "dos.jpg"
+          ]
+        },
+        {
+          "id": "alcaazul3",
+          "name": "alcancia Azul3",
+          "image": "alca-imagen3.jpg",
+          "price": "$25000",
+          "images": [
+            "uno.jpg",
+            "dos.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Portalapices",
+      "tag": "stuff",
+      "imagen": "portalapices.jpg",
+      "descripcion": "No cubre garantía por mala manipulación es decir por: Golpes, si te saltas las instrucciones de uso, si modificas o pones algo adicional al producto Después de recibir tu pedido tienes 5 días para hacernos saber cuál es el daño que presenta tu artículo, te puedes comunicar con nosotros por medio de WhatsApp, correo electrónico o llamada.",
 
-    ]
-  },
-  {
-    "id": 14,
-    "name": "Otros",
-    "tag": "stuff",
-    "imagen": "skull.png",
-    "productos": [{
-        "id": "otroamarilla",
-        "name": "Otros Amarilla",
-        "image": "imagen1.jpg",
-        "price": "$25000",
-        "images": ["uno.jpg", "dos.jpg"]
-      },
-      {
-        "id": "alcaazul",
-        "name": "alcancia Azul",
-        "image": "alca-imagen1.jpg",
-        "price": "$25000",
-        "images": ["uno.jpg", "dos.jpg"]
-      },
-      {
-        "id": "alcaazul2",
-        "name": "alcancia Azul2",
-        "image": "alca-imagen2.jpg",
-        "price": "$25000",
-        "images": ["uno.jpg", "dos.jpg"]
-      },
-      {
-        "id": "alcaazul3",
-        "name": "alcancia Azul3",
-        "image": "alca-imagen3.jpg",
-        "price": "$25000",
-        "images": ["uno.jpg", "dos.jpg"]
-      }
+      "productos": [{
+          "id": "portaroja",
+          "name": "portalapices Roja",
+          "image": "imagen1.jpg",
+          "price": "$25000",
+          "images": [
+            "uno.jpg",
+            "dos.jpg"
+          ]
+        },
+        {
+          "id": "alcaazul",
+          "name": "alcancia Azul",
+          "image": "alca-imagen1.jpg",
+          "price": "$25000",
+          "images": [
+            "uno.jpg",
+            "dos.jpg"
+          ]
+        },
+        {
+          "id": "alcaazul2",
+          "name": "alcancia Azul2",
+          "image": "alca-imagen2.jpg",
+          "price": "$25000",
+          "images": [
+            "uno.jpg",
+            "dos.jpg"
+          ]
+        },
+        {
+          "id": "alcaazul3",
+          "name": "alcancia Azul3",
+          "image": "alca-imagen3.jpg",
+          "price": "$25000",
+          "images": [
+            "uno.jpg",
+            "dos.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Otros",
+      "tag": "stuff",
+      "imagen": "skull.png",
+      "descripcion": "No cubre garantía por mala manipulación es decir por: Golpes, si te saltas las instrucciones de uso, si modificas o pones algo adicional al producto Después de recibir tu pedido tienes 5 días para hacernos saber cuál es el daño que presenta tu artículo, te puedes comunicar con nosotros por medio de WhatsApp, correo electrónico o llamada.",
 
-    ]
-  }
-]
+      "productos": [{
+          "id": "otroamarilla",
+          "name": "Otros Amarilla",
+          "image": "imagen1.jpg",
+          "price": "$25000",
+          "images": [
+            "uno.jpg",
+            "dos.jpg"
+          ]
+        },
+        {
+          "id": "alcaazul",
+          "name": "alcancia Azul",
+          "image": "alca-imagen1.jpg",
+          "price": "$25000",
+          "images": [
+            "uno.jpg",
+            "dos.jpg"
+          ]
+        },
+        {
+          "id": "alcaazul2",
+          "name": "alcancia Azul2",
+          "image": "alca-imagen2.jpg",
+          "price": "$25000",
+          "images": [
+            "uno.jpg",
+            "dos.jpg"
+          ]
+        },
+        {
+          "id": "alcaazul3",
+          "name": "alcancia Azul3",
+          "image": "alca-imagen3.jpg",
+          "price": "$25000",
+          "images": [
+            "uno.jpg",
+            "dos.jpg"
+          ]
+        }
+      ]
+    }
+  ],
+  "destacados": [{
+      "titulo": "titulo",
+      "imagen": "logo.png",
+      "descripcion": "solo por este mes 10% descuento  poro compras superiores a $50.000"
+    },
+
+    {
+      "titulo": "titulo",
+      "imagen": "logo.png",
+      "descripcion": "solo por este mes 10% descuento  poro compras superiores a $50.000"
+    },
+
+    {
+      "titulo": "titulo",
+      "imagen": "logo.png",
+      "descripcion": "solo por este mes 10% descuento  poro compras superiores a $50.000"
+    }
+
+  ]
 }

@@ -14,7 +14,8 @@ const httpOptions = {
 @Injectable({ providedIn: 'root' })
 export class HeroService {
 
-  private heroesUrl = 'api/heroes';  // URL to web api
+  private heroesUrl = 'http://localhost:5000/categorias';  // URL to web api
+  private destacadosUrl = 'http://localhost:5000/destacados';
 
   constructor(
     private http: HttpClient,
@@ -28,6 +29,14 @@ export class HeroService {
         catchError(this.handleError('getHeroes', []))
       );
   }
+  getDestacados (): Observable<Hero[]> {
+    return this.http.get<Hero[]>(this.destacadosUrl)
+      .pipe(
+        tap(_ => this.log('fetched destacados')),
+        catchError(this.handleError('getDestacados', []))
+      );
+  }
+
 
   
 
