@@ -1,8 +1,8 @@
 /* AppComponent's private CSS styles */
 .navigation .row {
   padding: 0px;
+  font-family: 'Rock Salt', cursive;
 }
-
 h1 {
   font-size: 1.2em;
   color: #999;

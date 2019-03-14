@@ -1,4 +1,11 @@
 /* HeroDetailComponent's private CSS styles */
+
+.product-image{
+  border-radius:50%;
+}
+.lista-productos{
+  min-height:400px;
+}
 label {
   display: inline-block;
   width: 3em;
@@ -31,7 +38,7 @@ button:disabled {
 
 .col-sm-4.producto {
   height: 40vh;
-  border: thin solid #0000001a;
+  min-height: 270px;
   padding: 20px;
   text-align: center;
   background: #ffffff45;

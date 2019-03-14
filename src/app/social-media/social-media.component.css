@@ -1,3 +1,9 @@
 .logos-social-media a {
     margin: 20px;
 }
+.col-sm-4.logos-social-media {
+    background: #00000045;
+    transform: skew(-20deg);
+    color: white;
+    padding: 8px;
+}

@@ -1,5 +1,7 @@
 /* Navigation link styles */
-
+.menu-izq .row, .menu-der .row{
+  transform: skew(20deg);
+}
 app-g-navigation a {
     text-decoration: none;
     margin-right: 10px;
@@ -18,20 +20,25 @@ app-g-navigation{
   border-top: 4px solid yellow;
   border-bottom: 4px solid yellow;
   border-radius: 45px;
+  transform: skew(20deg);
 }
 .menu-link {
   margin: 50px 0px;
-  font-size: 29px;
+  font-size: 15px;
   background: black;
   padding: 10px 0px;
   border-top: 4px solid yellow;
   border-bottom: 4px solid yellow;
+  font-family: 'Rock Salt', cursive;
 }
   nav span a {
     padding: 10px;
     margin: 2px;
 }
 
+.navigation .row{
+  transform: skew(20deg);
+}
 
 
 
