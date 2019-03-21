@@ -5,7 +5,7 @@
       "tag": "stuff",
       "imagen": "image8.png",
       "descripcion": "No cubre garantía por mala manipulación es decir por: Golpes, si te saltas las instrucciones de uso, si modificas o pones algo adicional al producto Después de recibir tu pedido tienes 5 días para hacernos saber cuál es el daño que presenta tu artículo, te puedes comunicar con nosotros por medio de WhatsApp, correo electrónico o llamada."
-      "productos": [{
+      ,"productos": [{
           "id": "alcaazul",
           "name": "alcancia Punk",
           "image": "alcancia5.jpeg",
@@ -61,7 +61,7 @@
       "tag": "stuff",
       "imagen": "image1.png",
       "descripcion": "No cubre garantía por mala manipulación es decir por: Golpes, si te saltas las instrucciones de uso, si modificas o pones algo adicional al producto Después de recibir tu pedido tienes 5 días para hacernos saber cuál es el daño que presenta tu artículo, te puedes comunicar con nosotros por medio de WhatsApp, correo electrónico o llamada."
-
+,
       "productos": [{
           "id": "materaverde",
           "name": "matera bulldogVerde",
@@ -94,7 +94,7 @@
       "tag": "stuff",
       "imagen": "portalapices.jpg",
       "descripcion": "No cubre garantía por mala manipulación es decir por: Golpes, si te saltas las instrucciones de uso, si modificas o pones algo adicional al producto Después de recibir tu pedido tienes 5 días para hacernos saber cuál es el daño que presenta tu artículo, te puedes comunicar con nosotros por medio de WhatsApp, correo electrónico o llamada."
-
+,
       "productos": [{
           "id": "portazombie",
           "name": "portalapices Zombie",
