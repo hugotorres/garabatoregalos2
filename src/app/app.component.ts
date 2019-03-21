@@ -9,6 +9,7 @@ import { Router, RouterModule } from '@angular/router';
 export class AppComponent {
   title = "Garabatos";
   mybool: boolean;
+  
   constructor(private router: Router, ) {
     console.log(this.router.url);
   }

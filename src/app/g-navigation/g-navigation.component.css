@@ -13,22 +13,20 @@ app-g-navigation{
 }
 .logo-nav img {
   height: 80px;
-  margin-top: 20px;
+  margin-top: 7px;
 }
 .col-sm-4.logo-nav.text-center {
   background: black;
-  border-top: 4px solid yellow;
-  border-bottom: 4px solid yellow;
-  border-radius: 45px;
   transform: skew(20deg);
+  background: #000000c4;
+    -webkit-transform: skew(20deg);
+    transform: skew(20deg);
+    box-shadow: #00000091 2px 3px 23px 5px;
 }
 .menu-link {
-  margin: 50px 0px;
-  font-size: 15px;
+  margin: 47px 0px 0px 0px;
   background: black;
   padding: 10px 0px;
-  border-top: 4px solid yellow;
-  border-bottom: 4px solid yellow;
   font-family: 'Rock Salt', cursive;
 }
   nav span a {

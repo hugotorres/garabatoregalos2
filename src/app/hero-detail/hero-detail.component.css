@@ -1,7 +1,12 @@
 /* HeroDetailComponent's private CSS styles */
 
+img.product-image:hover {
+  transform: scale(1.2);
+  transform: rotate(20deg) scale(1.2);
+}
 .product-image{
   border-radius:50%;
+  transition:all 1s;
 }
 .lista-productos{
   min-height:400px;

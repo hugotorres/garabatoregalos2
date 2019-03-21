@@ -5,8 +5,9 @@
     <h2 class="text-center">{{hero.name | uppercase}}</h2>
     <div class="row">
       <div *ngFor="let producto of hero.productos" class="col-sm-4 producto">
-        <div class="imagen-producto">
-          <img src="{{'assets/img/'+producto.image}}" alt="{{producto.name}}" height="150px" class="product-image">
+        <div class="imagen-producto" (click)="selectProductHandler(producto)">
+          <img src="{{'assets/img/'+producto.image}}" alt="{{producto.name}}" height="150px" class="product-image" data-toggle="modal" data-target="#exampleModal">
+        
         </div>
         <div class="precio">
           {{producto.price}}
@@ -16,3 +17,34 @@
   </div>
 </div>
 <app-footer></app-footer>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content container-fluid" *ngIf="selectedProduct">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">{{selectedProduct.name}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body container row">
+        
+        <div class="col-sm-8">
+          <app-carousel imagenes="{{selectedProduct.images}}"></app-carousel>
+
+          {{selectedProduct.image}}
+
+
+        </div>
+        <div class="col-sm-4">
+        {{selectedProduct.description}}{{selectedProduct.price}}</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

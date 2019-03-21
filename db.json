@@ -13,7 +13,9 @@
           "images": [
             "alcancia4.jpg",
             "alcancia9.jpg"
-          ]
+          ],
+          "descripcion": "No cubre garantía por mala manipulación es decir por: Golpes, si te saltas las instrucciones de uso, si modificas o pones algo adicional al producto Después de recibir tu pedido tienes 5 días para hacernos saber cuál es el daño que presenta tu artículo, te puedes comunicar con nosotros por medio de WhatsApp, correo electrónico o llamada.",
+
         },
         {
           "id": "alcaazul2",
@@ -23,7 +25,9 @@
           "images": [
             "alcancia2.jpg",
             "alcanciaazul.png"
-          ]
+          ],
+          "descripcion": "No cubre garantía por mala manipulación es decir por: Golpes, si te saltas las instrucciones de uso, si modificas o pones algo adicional al producto Después de recibir tu pedido tienes 5 días para hacernos saber cuál es el daño que presenta tu artículo, te puedes comunicar con nosotros por medio de WhatsApp, correo electrónico o llamada.",
+
         },
         {
           "id": "alcaazul3",
@@ -43,7 +47,9 @@
           "images": [
             "uno.jpg",
             "dos.jpg"
-          ]
+          ],
+          "descripcion": "No cubre garantía por mala manipulación es decir por: Golpes, si te saltas las instrucciones de uso, si modificas o pones algo adicional al producto Después de recibir tu pedido tienes 5 días para hacernos saber cuál es el daño que presenta tu artículo, te puedes comunicar con nosotros por medio de WhatsApp, correo electrónico o llamada.",
+
         }
       ]
     },
@@ -62,7 +68,9 @@
           "images": [
             "uno.jpg",
             "dos.jpg"
-          ]
+          ],
+          "descripcion": "No cubre garantía por mala manipulación es decir por: Golpes, si te saltas las instrucciones de uso, si modificas o pones algo adicional al producto Después de recibir tu pedido tienes 5 días para hacernos saber cuál es el daño que presenta tu artículo, te puedes comunicar con nosotros por medio de WhatsApp, correo electrónico o llamada.",
+
         },
         {
           "id": "materaazul",
@@ -72,7 +80,9 @@
           "images": [
             "elefantc3.jpeg",
             "elefaneazul1.jpeg"
-          ]
+          ],
+          "descripcion": "No cubre garantía por mala manipulación es decir por: Golpes, si te saltas las instrucciones de uso, si modificas o pones algo adicional al producto Después de recibir tu pedido tienes 5 días para hacernos saber cuál es el daño que presenta tu artículo, te puedes comunicar con nosotros por medio de WhatsApp, correo electrónico o llamada.",
+
         }
       ]
     },
@@ -91,7 +101,9 @@
           "images": [
             "portalapices.jpg",
             "portalapices.jpg"
-          ]
+          ],
+          "descripcion": "No cubre garantía por mala manipulación es decir por: Golpes, si te saltas las instrucciones de uso, si modificas o pones algo adicional al producto Después de recibir tu pedido tienes 5 días para hacernos saber cuál es el daño que presenta tu artículo, te puedes comunicar con nosotros por medio de WhatsApp, correo electrónico o llamada.",
+
         }
         
       ]
@@ -111,7 +123,9 @@
           "images": [
             "garabatos.jpg",
             "dos.jpg"
-          ]
+          ],
+          "descripcion": "No cubre garantía por mala manipulación es decir por: Golpes, si te saltas las instrucciones de uso, si modificas o pones algo adicional al producto Después de recibir tu pedido tienes 5 días para hacernos saber cuál es el daño que presenta tu artículo, te puedes comunicar con nosotros por medio de WhatsApp, correo electrónico o llamada.",
+
         },
         {
           "id": "maya",
@@ -121,7 +135,9 @@
           "images": [
             "maya.jpg",
             "dos.jpg"
-          ]
+          ],
+          "descripcion": "No cubre garantía por mala manipulación es decir por: Golpes, si te saltas las instrucciones de uso, si modificas o pones algo adicional al producto Después de recibir tu pedido tienes 5 días para hacernos saber cuál es el daño que presenta tu artículo, te puedes comunicar con nosotros por medio de WhatsApp, correo electrónico o llamada.",
+
         }
       ]
     }

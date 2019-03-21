@@ -14,8 +14,8 @@ const httpOptions = {
 @Injectable({ providedIn: 'root' })
 export class HeroService {
 
-  private heroesUrl = 'http://localhost:5000/categorias';  // URL to web api
-  private destacadosUrl = 'http://localhost:5000/destacados';
+  private heroesUrl = 'https://my-json-server.typicode.com/hugotorres/garabatoregalos2/categorias';  // URL to web api
+  private destacadosUrl = 'https://my-json-server.typicode.com/hugotorres/garabatoregalos2/destacados';
 
   constructor(
     private http: HttpClient,

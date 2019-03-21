@@ -9,6 +9,13 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'categoria/:id', component: HeroDetailComponent },
+  { path: 'alcancias/:id', component: HeroDetailComponent },
+  { path: 'materas/:id', component: HeroDetailComponent },
+  { path: 'portalapices/:id', component: HeroDetailComponent },
+  { path: 'otros/:id', component: HeroDetailComponent },
+
+
+
   { path: 'producto/:id', component: ProductoDetailComponent },
   { path: 'categorias', component: HeroesComponent }
 ];

@@ -20,6 +20,7 @@ import { DestacadosComponent } from './destacados/destacados.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { FooterComponent } from './footer/footer.component';
 import { SocialMediaComponent } from './social-media/social-media.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   imports: [
@@ -47,7 +48,8 @@ import { SocialMediaComponent } from './social-media/social-media.component';
     DestacadosComponent,
     CategoriaComponent,
     FooterComponent,
-    SocialMediaComponent
+    SocialMediaComponent,
+    CarouselComponent
   ],
   bootstrap: [ AppComponent ]
 })
