@@ -8,17 +8,21 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./destacados.component.css']
 })
 export class DestacadosComponent implements OnInit {
-  destacados= [];
+  destacados;
+
   constructor(private heroService: HeroService) { }
 
     ngOnInit() {
-      this.getDestacados();
+     // this.getDestacadosFromJson();
     }
-  
+    getDestacadosFromJson(): void {
+      this.heroService.getDestacadosFromJson()
+      .subscribe(destacados => this.destacados = destacados);
+    }
     getDestacados(): void {
       this.heroService.getDestacados()
       .subscribe(destacados => this.destacados = destacados);
     }
- 
+
 
 }

@@ -14,4 +14,9 @@ photoArray:[];
   this.photoArray=this.imagenes.split(",");
   }
 
+
+  ngOnChanges() {
+this.photoArray=this.imagenes.split(",");
+  }
+
 }

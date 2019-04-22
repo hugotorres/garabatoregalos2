@@ -1,5 +1,19 @@
 app-footer>.row {
-    background: #ececec66;
-    padding: 20px;
+    background: #d5d2d2fa;
+    padding: |10px;
     border: thin solid white;
+}
+
+.footer {
+    background: #d5d2d2fa;
+    font-size: 13px;
+}
+
+.formulario-contacto .row {
+    padding: 10px;
+}
+
+.formulario-contacto .col-md-8,
+.datos-contacto {
+    padding: 20px;
 }

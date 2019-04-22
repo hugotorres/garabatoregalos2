@@ -1,50 +1,62 @@
-
-<app-g-navigation></app-g-navigation>
+<app-g-navigation>
+</app-g-navigation>
 <div *ngIf="hero" class="row">
-  <div class="container lista-productos">
-    <h2 class="text-center">{{hero.name | uppercase}}</h2>
-    <div class="row">
-      <div *ngFor="let producto of hero.productos" class="col-sm-4 producto">
-        <div class="imagen-producto" (click)="selectProductHandler(producto)">
-          <img src="{{'assets/img/'+producto.image}}" alt="{{producto.name}}" height="150px" class="product-image" data-toggle="modal" data-target="#exampleModal">
-        
+    <div class="container lista-productos">
+        <h2 class="text-center">{{hero.name | uppercase}}{{productosCategoria}}</h2>
+        <div class="row">
+            <div *ngFor="let producto of hero.productos" class="col-sm-6 producto">
+                <div class="imagen-producto" (click)="selectProductHandler(producto)">
+                    <img src="{{'assets/img/'+producto.image}}" alt="{{producto.name}}" class="product-image" data-toggle="modal" data-target="#exampleModal">
+                </div>
+                <div class="precio">
+                    {{producto.price}}
+                </div>
+            </div>
         </div>
-        <div class="precio">
-          {{producto.price}}
-        </div>
-      </div>
     </div>
-  </div>
 </div>
 <app-footer></app-footer>
 
-
-
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-    <div class="modal-content container-fluid" *ngIf="selectedProduct">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">{{selectedProduct.name}}</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<div class="modal fade in" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content container-fluid" *ngIf="selectedProduct">
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="exampleModalLongTitle">{{selectedProduct.name}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body container row">
-        
-        <div class="col-sm-8">
-          <app-carousel imagenes="{{selectedProduct.images}}"></app-carousel>
+            </div>
+            <div class="modal-body container row">
 
-          {{selectedProduct.image}}
+                <div class="col-sm-7">
+                    <app-carousel *ngIf="selectedProduct.images" imagenes="{{selectedProduct.images}}"></app-carousel>
+                </div>
+                <div class="col-sm-5 text-center text-bottom">
+                    <div class="description" *ngIf="selectedProduct.description">
+
+                        {{selectedProduct.description}}
+
+                    </div>
+                    <div class="description" *ngIf="!selectedProduct.description">
+
+                        <p>Este producto ha sido pintado a mano usando pinturas acrilicas de primera calidad, asi como resinas epoxicas para aumentar tu durabilidad y facilitar su limpieza.
+
+                        </p>
+
+                    </div>
 
 
+
+                    <div class="modal-price">
+                        {{selectedProduct.price}}
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="price-tag"></div>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
         </div>
-        <div class="col-sm-4">
-        {{selectedProduct.description}}{{selectedProduct.price}}</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
     </div>
-  </div>
 </div>

@@ -23,15 +23,22 @@ nav a {
   font-family: 'Rock Salt', cursive;
 }
 nav a:visited, a:link {
-  color: #607D8B;
+  color: #039be5;
+      text-decoration: none;
 }
 nav a:hover {
   color: #039be5;
   background-color: #CFD8DC;
+      text-decoration: none;
 }
 nav a.active {
   color: #039be5;
 }
 div#carouselExampleIndicators {
   background: black;
+}
+
+a:hover {
+    color: #039be5 !important;
+    text-decoration: none !important;
 }

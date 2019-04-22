@@ -12,24 +12,38 @@ import { CategoriaService }  from '../categoria.service';
 export class CategoriaComponent implements OnInit {
 
 
-    @Input() categoria: Categoria;
+    @Input() categoria:Categoria;
+    @Input() hero: Categoria;
+    selectedProduct;
+    @Input() productosCategoria: Categoria[];
 
     constructor(
       private route: ActivatedRoute,
       private categoriaService: CategoriaService,
       private location: Location
     ) {}
-  
+
     ngOnInit(): void {
-      this.getCategoria();
+      //this.getCategoria();
+      this.getPostByCategory();
     }
-  
-    getCategoria(): void {
+
+    getPostByCategory():void{
+      const id = +this.route.snapshot.paramMap.get('id');
+      this.categoriaService.getPostsByCategory(id)
+        .subscribe(posts=>this.productosCategoria = posts);
+    }
+    
+    getCategoria():void {
       const id = +this.route.snapshot.paramMap.get('id');
       this.categoriaService.getCategoria(id)
-        .subscribe(categoria => this.categoria = categoria);
+        .subscribe(categorias=>this.categoria = categorias);
     }
-  
+    selectProductHandler(producto){
+      this.selectedProduct=producto;
+      }
+
+
     goBack(): void {
       this.location.back();
     }
@@ -39,6 +53,8 @@ export class CategoriaComponent implements OnInit {
         .subscribe(() => this.goBack());
     }
     */
-  
+
 
 }
+
+

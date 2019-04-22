@@ -14,8 +14,9 @@ const httpOptions = {
 @Injectable({ providedIn: 'root' })
 export class CategoriaService {
 
-  private categoriasUrl = 'api/categorias';  // URL to web api
-
+ // private categoriasUrl = 'https://my-json-server.typicode.com/hugotorres/garabatoregalos2/categorias';  // URL to web api
+private categoriasUrl ='http://garabatoregalos.com/wp49/wp-json/wp/v2/posts';
+private categoriaUrl ='http://garabatoregalos.com/wp49/wp-json/wp/v2/categories';
   constructor(
     private http: HttpClient,
     private messageService: MessageService) { }
@@ -29,7 +30,14 @@ export class CategoriaService {
       );
   }
 
-  
+  getPostsByCategory(id:number): Observable<Categoria[]>{
+    return this.http.get<Categoria[]>(this.categoriasUrl+'?categories='+id)
+    .pipe(
+
+    );
+  }
+
+
 
   /** GET hero by id. Return `undefined` when id not found */
   getCategoriaNo404<Data>(id: number): Observable<Categoria> {
@@ -46,13 +54,14 @@ export class CategoriaService {
   }
 
   /** GET hero by id. Will 404 if id not found */
-  getCategoria(id: number): Observable<Categoria> {
+  getCategoria(id: number):Observable<Categoria>{
     const url = `${this.categoriasUrl}/${id}`;
     return this.http.get<Categoria>(url).pipe(
       tap(_ => this.log(`fetched categoria id=${id}`)),
       catchError(this.handleError<Categoria>(`getCategoria id=${id}`))
     );
   }
+
 
   /* GET heroes whose name contains search term */
   searchCategorias(term: string): Observable<Categoria[]> {

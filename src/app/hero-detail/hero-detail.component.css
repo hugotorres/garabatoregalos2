@@ -1,50 +1,84 @@
 /* HeroDetailComponent's private CSS styles */
 
 img.product-image:hover {
-  transform: scale(1.2);
-  transform: rotate(20deg) scale(1.2);
+    transform: skew(2deg);
+    cursor: pointer;
 }
-.product-image{
-  border-radius:50%;
-  transition:all 1s;
+
+.footer .container {
+    background: #ebebeb;
 }
-.lista-productos{
-  min-height:400px;
+
+img.product-image {
+    width: 80%;
 }
+
+.description {
+    /* border-bottom: thin solid grey; */
+    padding: 20px;
+    text-align: left;
+    background: #5f5f3e17;
+}
+
+.precio,
+.modal-price {
+    float: right;
+    background: lightseagreen;
+    padding: 5px 25px;
+    border: thin solid white;
+    border-radius: 0px 20px 20px;
+    cursor: pointer;
+    font-size: 17px;
+    color: white;
+    text-shadow: black 1px -1px;
+}
+
+.modal-header {
+    background: black;
+    color: rgb(185, 198, 1);
+    text-align: center;
+    border-radius: 0px;
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+    padding: 10px 17px;
+    margin: -7px -20px 5px -20px;
+    box-shadow: rgb(185, 198, 1) 5px 7px;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.product-image {
+    border-radius: 20px 20px 0px 20px;
+    transition: all 1s;
+}
+
+.lista-productos {
+    min-height: 400px;
+    padding-top: 20px;
+}
+
 label {
-  display: inline-block;
-  width: 3em;
-  margin: .5em 0;
-  color: #607D8B;
-  font-weight: bold;
+    display: inline-block;
+    width: 3em;
+    margin: .5em 0;
+    color: #607D8B;
+    font-weight: bold;
 }
+
 input {
-  height: 2em;
-  font-size: 1em;
-  padding-left: .4em;
-}
-button {
-  margin-top: 20px;
-  font-family: Arial;
-  background-color: #eee;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer; cursor: hand;
-}
-button:hover {
-  background-color: #cfd8dc;
-}
-button:disabled {
-  background-color: #eee;
-  color: #ccc;
-  cursor: auto;
+    height: 2em;
+    font-size: 1em;
+    padding-left: .4em;
 }
 
 .col-sm-4.producto {
-  height: 40vh;
-  min-height: 270px;
-  padding: 20px;
-  text-align: center;
-  background: #ffffff45;
+    height: 40vh;
+    min-height: 270px;
+    padding: 20px;
+    text-align: center;
+    background: #ffffff45;
 }

@@ -9,13 +9,20 @@ import { HeroService } from '../hero.service';
 })
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
+  destacados;
 
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
-    this.getHeroes();
+    //this.getHeroes();
+   // this.getDestacadosFromJson();
+
   }
 
+  getDestacadosFromJson(): void {
+    this.heroService.getDestacadosFromJson()
+    .subscribe(destacados => this.destacados = destacados);
+  }
   getHeroes(): void {
     this.heroService.getHeroes()
     .subscribe(heroes => this.heroes = heroes);

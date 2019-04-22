@@ -20,7 +20,7 @@ export class ProductoDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getHero();
+    //this.getHero();
   }
 
   getHero(): void {
