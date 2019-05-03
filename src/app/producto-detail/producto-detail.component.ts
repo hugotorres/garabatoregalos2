@@ -20,7 +20,7 @@ export class ProductoDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    //this.getHero();
+    this.getHero();
   }
 
   getHero(): void {
@@ -37,4 +37,5 @@ export class ProductoDetailComponent implements OnInit {
     this.heroService.updateHero(this.hero)
       .subscribe(() => this.goBack());
   }
+
 }

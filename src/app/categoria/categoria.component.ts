@@ -14,6 +14,7 @@ export class CategoriaComponent implements OnInit {
 
     @Input() categoria:Categoria;
     @Input() hero: Categoria;
+    nombreCategoria;
     selectedProduct;
     @Input() productosCategoria: Categoria[];
 
@@ -26,14 +27,16 @@ export class CategoriaComponent implements OnInit {
     ngOnInit(): void {
       //this.getCategoria();
       this.getPostByCategory();
+      this.nombreCategoria =  this.route.url['value'][0].path;
     }
 
     getPostByCategory():void{
+
       const id = +this.route.snapshot.paramMap.get('id');
       this.categoriaService.getPostsByCategory(id)
         .subscribe(posts=>this.productosCategoria = posts);
     }
-    
+
     getCategoria():void {
       const id = +this.route.snapshot.paramMap.get('id');
       this.categoriaService.getCategoria(id)

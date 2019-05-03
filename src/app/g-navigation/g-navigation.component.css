@@ -4,7 +4,11 @@
 .menu-der .row {
     transform: skew(10deg);
 }
-
+.logo-nav h1 {
+    font-size: 100%;
+    /* font-family: inherit; */
+    color: yellow;
+}
 a:hover {
     text-decoration: none;
     color: rgb(185, 198, 1) !important;

@@ -15,8 +15,8 @@ const httpOptions = {
 export class CategoriaService {
 
  // private categoriasUrl = 'https://my-json-server.typicode.com/hugotorres/garabatoregalos2/categorias';  // URL to web api
-private categoriasUrl ='http://garabatoregalos.com/wp49/wp-json/wp/v2/posts';
-private categoriaUrl ='http://garabatoregalos.com/wp49/wp-json/wp/v2/categories';
+private categoriasUrl ='https://garabatoregalos.com/wp49/wp-json/wp/v2/posts';
+private categoriaUrl ='https://garabatoregalos.com/wp49/wp-json/wp/v2/categories';
   constructor(
     private http: HttpClient,
     private messageService: MessageService) { }

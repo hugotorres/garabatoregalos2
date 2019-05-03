@@ -1,12 +1,7 @@
-app-footer>.row {
-    background: #d5d2d2fa;
-    padding: |10px;
-    border: thin solid white;
-}
-
 .footer {
-    background: #d5d2d2fa;
-    font-size: 13px;
+    background: #000000fa;
+    font-size: 15px;
+    color: rgb(185, 198, 1);
 }
 
 .formulario-contacto .row {
@@ -16,4 +11,23 @@ app-footer>.row {
 .formulario-contacto .col-md-8,
 .datos-contacto {
     padding: 20px;
+}
+
+form>* {
+    padding: 7px;
+    font-size: 15px;
+    margin: 5px;
+    /* border: thin solid white; */
+}
+
+#mc_embed_signup[_ngcontent-c3] {
+    background: #040404;
+    clear: left;
+    font: 15px;
+    width: 100%;
+    color: white;
+}
+
+.mensaje-formulario {
+    text-align: center;
 }

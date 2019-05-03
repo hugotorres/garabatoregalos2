@@ -2,6 +2,7 @@ import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
@@ -21,6 +22,7 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { FooterComponent } from './footer/footer.component';
 import { SocialMediaComponent } from './social-media/social-media.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { SecondNavigationComponent } from './second-navigation/second-navigation.component';
 
 @NgModule({
   imports: [
@@ -36,6 +38,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     )
     */
   ],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   declarations: [
     AppComponent,
     DashboardComponent,
@@ -49,8 +52,10 @@ import { CarouselComponent } from './carousel/carousel.component';
     CategoriaComponent,
     FooterComponent,
     SocialMediaComponent,
-    CarouselComponent
+    CarouselComponent,
+    SecondNavigationComponent
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+
 })
 export class AppModule { }
