@@ -37,6 +37,12 @@ private categoriaUrl ='https://garabatoregalos.com/wp49/wp-json/wp/v2/categories
     );
   }
 
+  getAllPosts(): Observable<Categoria[]>{
+    return this.http.get<Categoria[]>(this.categoriasUrl)
+    .pipe(
+
+    );
+  }
 
 
   /** GET hero by id. Return `undefined` when id not found */

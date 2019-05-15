@@ -26,18 +26,90 @@
             m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
         }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/fbf4d136a0cd8dda11a4a2c90/12a711e7b2bc0bfdab99000a8.js");
     </script>
+
+
+
+<style>
+
+</style>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <app-root></app-root>
+    <app-root>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    </app-root>
+
+    <!---->
+     <!--  -->
+     <script  src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js " integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm " crossorigin="anonymous "></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+
+       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+
+
+
+
+
+
+  <script>
+      var Expand = (function() {
+        var tile = $('.strips__strip');
+        var tileLink = $('.strips__strip > .strip__content');
+        var tileText = tileLink.find('.strip__inner-text');
+        var stripClose = $('.strip__close');
+
+        var expanded  = false;
+
+        var open = function() {
+
+          var tile = $(this).parent();
+
+            if (!expanded) {
+              tile.addClass('strips__strip--expanded');
+              // add delay to inner text
+              tileText.css('transition', 'all .5s .3s cubic-bezier(0.23, 1, 0.32, 1)');
+              stripClose.addClass('strip__close--show');
+              stripClose.css('transition', 'all .6s 1s cubic-bezier(0.23, 1, 0.32, 1)');
+              expanded = true;
+            }
+          };
+
+        var close = function() {
+          if (expanded) {
+            tile.removeClass('strips__strip--expanded');
+            // remove delay from inner text
+            tileText.css('transition', 'all 0.15s 0 cubic-bezier(0.23, 1, 0.32, 1)');
+            stripClose.removeClass('strip__close--show');
+            stripClose.css('transition', 'all 0.2s 0s cubic-bezier(0.23, 1, 0.32, 1)')
+            expanded = false;
+          }
+        }
+
+          var bindActions = function() {
+            tileLink.on('click', open);
+            stripClose.on('click', close);
+          };
+
+          var init = function() {
+            bindActions();
+          };
+
+          return {
+            init: init
+          };
+
+        }());
+
+      Expand.init();
+       </script>
+
+
 
 </body>
 

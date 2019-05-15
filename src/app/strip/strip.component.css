@@ -1,0 +1,10 @@
+.close {
+    background: black;
+    height: 40px;
+    width: 40px;
+    opacity: 0;
+}
+
+.close.strip__close--show {
+    opacity: 0.5;
+}

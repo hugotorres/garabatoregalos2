@@ -23,6 +23,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SocialMediaComponent } from './social-media/social-media.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { SecondNavigationComponent } from './second-navigation/second-navigation.component';
+import { StripComponent } from './strip/strip.component';
 
 @NgModule({
   imports: [
@@ -53,7 +54,8 @@ import { SecondNavigationComponent } from './second-navigation/second-navigation
     FooterComponent,
     SocialMediaComponent,
     CarouselComponent,
-    SecondNavigationComponent
+    SecondNavigationComponent,
+    StripComponent
   ],
   bootstrap: [ AppComponent ],
 

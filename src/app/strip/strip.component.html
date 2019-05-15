@@ -1,0 +1,17 @@
+<article #strip>
+    <div class="strip__content" (click)="open()">
+        <ng-content select="[title]"></ng-content>
+        <div class="strip__inner-text" #stripContenido>
+            <h2>{{titulo}}</h2>
+            <ng-content select="[body]">
+
+            </ng-content>
+            <p>
+                <a href="https://twitter.com/ettrics" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://twitter.com/ettrics" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://twitter.com/ettrics" target="_blank"><i class="fa fa-twitter"></i></a>
+            </p>
+        </div>
+    </div>
+    <div class="close2" (click)="close()"> <i #stripClose class="fa fa-close strip__close"></i></div>
+</article>
