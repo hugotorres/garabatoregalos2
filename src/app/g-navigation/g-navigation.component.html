@@ -6,10 +6,12 @@
             <div class="menu-link col-sm-6 text-center link-materas">
                 <a routerLink="/materas/6">Materas</a></div>
         </div>
-        <div class="col-sm-2 logo-nav text-center">
+        <div class="col-sm-2 text-center">
+          <div  class="logo-nav">
             <a routerLink="/dashboard" routerLinkActive="active">
                 <img src="assets/img/skull.png" alt="logo garabatos"><br> <h1> Garabato<br> Regalos</h1>
             </a>
+          </div>
         </div>
         <div class="col-sm-5 menu-der row arrow_box_r2">
             <div class="menu-link col-sm-6 text-center link-portalapices">
@@ -26,7 +28,7 @@
 
     <!--menu mobil-->
     <div class="d-lg-none d-xl-none">
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar  navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
          Garabato regalos
         </a>
@@ -36,16 +38,16 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Alcancias <span class="sr-only">(current)</span></a>
+              <a class="nav-link" routerLink="/alcancias/2">Alcancias <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Materas</a>
+              <a class="nav-link" routerLink="/materas/6">Materas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Portalapices</a>
+              <a class="nav-link"  routerLink="/portalapices/7">Portalapices</a>
             </li>
                  <li class="nav-item">
-              <a class="nav-link" href="#">Otros</a>
+              <a class="nav-link" routerLink="/otros/4">Otros</a>
             </li>
           </ul>
         </div>

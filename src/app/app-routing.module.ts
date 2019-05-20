@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'alcancias/:id', component: CategoriaComponent },
   { path: 'materas/:id', component: CategoriaComponent },
   { path: 'portalapices/:id', component: CategoriaComponent },
-  { path: 'otros/:id', component: ProductoDetailComponent },
+  { path: 'otros/:id', component: CategoriaComponent },
 
   { path: 'producto/:id', component: ProductoDetailComponent },
   { path: 'categorias', component: HeroesComponent }

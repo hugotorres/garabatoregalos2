@@ -50,7 +50,12 @@ app-g-navigation {
     border: 20px solid ghostwhite;
     padding: 12px;
 }
-
+.logo-nav {
+  background: black;
+  border-radius: 50%;
+  margin-top: 68px;
+  /* padding: 1px; */
+}
 .menu-link {
     margin: 100px 0px 50px 0px;
    /* background: black;*/
