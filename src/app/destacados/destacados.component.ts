@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import { HeroService } from '../hero.service';
+import { CategoriaService } from '../categoria.service';
 
 @Component({
   selector: 'app-destacados',
@@ -8,19 +7,17 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./destacados.component.css']
 })
 export class DestacadosComponent implements OnInit {
-  destacados;
-
-  constructor(private heroService: HeroService) { }
+  destacados:any=[{"id":"1","titulo":"dia del padre","texto":"Por el dia del padre 20% descuento","imagen_fondo":"\/milky-way-2695569_1280.jpg","imagen_destacada":"\/skulldefrenteazulconpuntos.png"},{"id":"2","titulo":"Nuevos Productos","texto":"ProXimamente Camisetas Garabato","imagen_fondo":"","imagen_destacada":"\/camiseta-calavera-clipart.jpg"}];
+  mediaUrl="https://www.garabatoregalos.com/october2/storage/app/media";
+  constructor(private categoriaService: CategoriaService) { }
 
     ngOnInit() {
-     // this.getDestacadosFromJson();
+      this.getDestacados();
     }
-    getDestacadosFromJson(): void {
-      this.heroService.getDestacadosFromJson()
-      .subscribe(destacados => this.destacados = destacados);
-    }
+
+
     getDestacados(): void {
-      this.heroService.getDestacados()
+      this.categoriaService.getDestacados()
       .subscribe(destacados => this.destacados = destacados);
     }
 

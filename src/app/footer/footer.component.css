@@ -7,9 +7,11 @@
 .formulario-contacto .row {
     padding: 10px;
 }
+
 app-footer img {
-  width: 110px;
+    width: 110px;
 }
+
 .formulario-contacto .col-md-8,
 .datos-contacto {
     padding: 20px;
@@ -32,4 +34,11 @@ form>* {
 
 .mensaje-formulario {
     text-align: center;
+}
+
+span.navbar-text {
+    padding: 8px;
+    color: white;
+    /* background: black; */
+    filter: invert(90%);
 }

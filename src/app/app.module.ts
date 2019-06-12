@@ -26,6 +26,7 @@ import { SecondNavigationComponent } from './second-navigation/second-navigation
 import { StripComponent } from './strip/strip.component';
 import { FilterCategoriaPipe } from './pipes/filter-categoria.pipe';
 import { ContactoComponent } from './contacto/contacto.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
@@ -33,6 +34,7 @@ import { ContactoComponent } from './contacto/contacto.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    NgbModule
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.

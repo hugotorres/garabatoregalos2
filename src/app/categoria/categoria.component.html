@@ -11,20 +11,27 @@
         <div>
             <h3 class="menu-productos" (click)="setCategory(0)" [class.active]="isActiveUrl(0)">Todos</h3>
             <h3 class="menu-productos" (click)="setCategory('Alcancia')" [class.active]="isActiveUrl('Alcancia')">Alcancias</h3>
-            <h3 class="menu-productos" (click)="setCategory('Matera')" [class.active]="isActiveUrl('Matera')">Materas</h3>
+            <h3 class="menu-productos" (click)="setCategory('Materas')" [class.active]="isActiveUrl('Materas')">Materas</h3>
             <h3 class="menu-productos" (click)="setCategory('Portalapices')" [class.active]="isActiveUrl('Portalapices')">Portalapices</h3>
             <h3 class="menu-productos" (click)="setCategory('Otros')" [class.active]="isActiveUrl('Otros')">Otros</h3>
         </div>
-        <div class="row" *ngIf="productosCategoria">
-            <div *ngFor="let producto of productosCategoria | filterCategoria:filtroCategoria " class="col-sm-4 producto" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine">
+        <div class="row grid" *ngIf="productosCategoria" data-masonry='{ "itemSelector": ".producto", "columnWidth": 200 }'>
+            <div *ngFor="let producto of productosCategoria | filterCategoria:filtroCategoria " class="col-sm-4 producto" data-aos="fade-up" data-aos-offset="10" data-aos-easing="ease-in-sine">
                 <div class="imagen-producto" (click)="selectProductHandler(producto)">
                     <img src="{{mediaUrl}}{{producto.imagen}}" alt="{{producto.descripcion}}" class="product-image" data-toggle="modal" data-target="#exampleModal">
+                    <div class="product-description-grid">{{producto.titulo}}</div>
                     <div class="slider-image-div" *ngIf="producto.destacado"></div>
                     <div class="precio hidden">
                         $ {{producto.precio|number}} X unidad
                     </div>
                 </div>
 
+            </div>
+        </div>
+        <div class="row" *ngIf="!productosCategoria">
+            <div class="container text-center" style="padding=200px">
+
+                <img src="{{mediaUrl}}/274.gif" alt="cargando productos">
             </div>
         </div>
     </div>
@@ -40,7 +47,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
             </div>
-            <div class="modal-body container row">
+            <div class="modal-body container row" style="padding: 0 !important">
                 <div class="col-sm-7">
                     <div style="max-height:550px">
                         <div id="carouselExampleIndicatorsmodal" class="carousel slide" data-ride="carousel">
@@ -69,17 +76,30 @@
                     </div>
                 </div>
                 <div class="col-sm-5 text-center text-bottom">
+                    <ngb-accordion [closeOthers]="true" #acc="ngbAccordion" activeIds="config-panel-one">
+                        <ngb-panel title="Descripcion" id="config-panel-one">
+                            <ng-template ngbPanelContent>
+                                {{selectedProduct.descripcion}}
+                            </ng-template>
+                        </ngb-panel>
+                        <ngb-panel title="Observaciónes">
+                            <ng-template ngbPanelContent>
+                                Este producto ha sido pintado a mano usando pinturas acrilicas de primera calidad, asi como resinas epoxicas para aumentar tu durabilidad y facilitar su limpieza.
 
-                    <div class="description" *ngIf="selectedProduct.descripcion">
-                        {{selectedProduct.descripcion}}
-                    </div>
-                    <br>
-                    <div class="description">
-                        <p>Este producto ha sido pintado a mano usando pinturas acrilicas de primera calidad, asi como resinas epoxicas para aumentar tu durabilidad y facilitar su limpieza.
-                        </p>
-                    </div>
+
+                            </ng-template>
+                        </ngb-panel>
+                    </ngb-accordion>
                     <div class="modal-price bg-dark" *ngIf="selectedProduct.precio">
                         $ {{selectedProduct.precio}} X unidad
+                        <div class="boton-pago" [innerHTML]="selectedProduct.boton_pago"></div>
+                    </div>
+                    <div class="modal-price bg-dark" *ngIf="!selectedProduct.precio">
+                        Cotizar
+                        <div class="boton-pago">
+                            <a href="https://api.whatsapp.com/send?phone={{phoneNumber}}&text=Estoy%20interesado%20en%20el%20producto {{selectedProduct.titulo}}" target="_blank">
+                           x Whatsapp
+                          </a></div>
                     </div>
                 </div>
             </div>

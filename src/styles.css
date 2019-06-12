@@ -1,7 +1,9 @@
 /* Master Styles */
-body{
-  background: #aaaaaa33 url(assets/img/fondo.png);
+
+body {
+    background: #aaaaaa33 url(assets/img/fondo.png);
 }
+
 .row {
     margin: 0px !important;
 }
@@ -11,10 +13,10 @@ body{
 }
 
 .starred img {
-  height: 45vh;
-  width: auto !important;
-  max-width: 100vw;
-  margin: 0 auto;
+    height: 45vh;
+    width: auto !important;
+    max-width: 100vw;
+    margin: 0 auto;
 }
 
 nav a,
@@ -193,6 +195,37 @@ app-strip:nth-child(5) .strip__content {
     transform: translate3d(100%, 0, 0);
     animation-name: strip5;
     animation-delay: 0.5s;
+}
+
+.card-header {
+    padding: initial !important;
+}
+
+.boton-pago a {
+    color: #ffffff;
+    background: mediumseagreen;
+    /* font-size: 17px; */
+    text-decoration: none;
+    padding: 2px 21px;
+    border-radius: 0 0 20px;
+    font-family: fantasy;
+    font-weight: lighter;
+    font-family: 'Amatic SC', cursive;
+}
+
+.card-body {
+    font-family: 'Amatic SC' !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    text-align: justify;
+    padding: 6px;
+}
+
+button.btn.btn-link {
+    color: initial;
+    font-family: 'Amatic SC' !important;
+    font-weight: bold !important;
+    font-size: 21px !important;
 }
 
 @media screen and (max-width: 760px) {

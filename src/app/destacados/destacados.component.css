@@ -1,10 +1,62 @@
+app-destacados section div {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7a7575+0,ffffff+13,ffffff+93,7a7575+100&0.44+1,0+7,0.22+97 */
+    background: -moz-linear-gradient(top, rgba(122, 117, 117, 0.44) 0%, rgba(132, 128, 128, 0.44) 1%, rgba(194, 192, 192, 0) 7%, rgba(255, 255, 255, 0.01) 13%, rgba(255, 255, 255, 0.21) 93%, rgba(179, 176, 176, 0.22) 97%, rgba(122, 117, 117, 0.22) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(122, 117, 117, 0.44) 0%, rgba(132, 128, 128, 0.44) 1%, rgba(194, 192, 192, 0) 7%, rgba(255, 255, 255, 0.01) 13%, rgba(255, 255, 255, 0.21) 93%, rgba(179, 176, 176, 0.22) 97%, rgba(122, 117, 117, 0.22) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(122, 117, 117, 0.44) 0%, rgba(132, 128, 128, 0.44) 1%, rgba(194, 192, 192, 0) 7%, rgba(255, 255, 255, 0.01) 13%, rgba(255, 255, 255, 0.21) 93%, rgba(179, 176, 176, 0.22) 97%, rgba(122, 117, 117, 0.22) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#707a7575', endColorstr='#387a7575', GradientType=0);
+    /* IE6-9 */
+}
 
-app-destacados section div{
+h3.texto-destacado:hover {
+    font-size: 2.8rem;
+    background: black;
+    transform: skew(5deg);
+}
 
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7a7575+0,ffffff+13,ffffff+93,7a7575+100&0.44+1,0+7,0.22+97 */
-background: -moz-linear-gradient(top, rgba(122,117,117,0.44) 0%, rgba(132,128,128,0.44) 1%, rgba(194,192,192,0) 7%, rgba(255,255,255,0.01) 13%, rgba(255,255,255,0.21) 93%, rgba(179,176,176,0.22) 97%, rgba(122,117,117,0.22) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(122,117,117,0.44) 0%,rgba(132,128,128,0.44) 1%,rgba(194,192,192,0) 7%,rgba(255,255,255,0.01) 13%,rgba(255,255,255,0.21) 93%,rgba(179,176,176,0.22) 97%,rgba(122,117,117,0.22) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(122,117,117,0.44) 0%,rgba(132,128,128,0.44) 1%,rgba(194,192,192,0) 7%,rgba(255,255,255,0.01) 13%,rgba(255,255,255,0.21) 93%,rgba(179,176,176,0.22) 97%,rgba(122,117,117,0.22) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#707a7575', endColorstr='#387a7575',GradientType=0 ); /* IE6-9 */
+img.d-block.imagen-destacado {
+    /* margin: 20px; */
+    padding: 20px 0px;
+}
 
+h3.texto-destacado {
+    border-radius: 20px;
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 64%;
+    font-size: 2.5rem;
+    width: 26%;
+    background: #0e030382;
+    padding: 10px;
+    transition: all 0.5s;
+}
+
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 100%;
+    padding: 30px;
+    height: 100%;
+}
+
+@media screen and (max-width: 660px) {
+    h3.texto-destacado {
+        border-radius: 20px;
+        color: white;
+        position: absolute;
+        top: 75%;
+        left: 4%;
+        font-size: 1.5rem;
+        width: 95%;
+        background: #0e030382;
+    }
+}
+
+.starred {
+    background-attachment: fixed;
+    background-size: cover;
 }

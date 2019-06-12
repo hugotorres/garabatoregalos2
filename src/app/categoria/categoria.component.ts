@@ -18,6 +18,7 @@ export class CategoriaComponent implements OnInit {
 	selectedProduct;
   filtroCategoria = 0;
   setViewResponse;
+  phoneNumber;
 	@Input() productosCategoria: Categoria[];
 
 	constructor(
@@ -29,16 +30,19 @@ export class CategoriaComponent implements OnInit {
 
 	ngOnInit(): void {
 		//this.getCategoria();
-		this.getPostByCategory();
+    this.getPostByCategory();
+
 		this.nombreCategoria = this.route.url['value'][0].path;
 	}
 	setCategory(category) {
 		this.filtroCategoria = category;
-	}
+  }
+
 	getPostByCategory(): void {
 		const id = +this.route.snapshot.paramMap.get('id');
     //this.categoriaService.getAllPosts().subscribe((posts) => (this.productosCategoria = posts));
     this.categoriaService.getData().subscribe((posts) => (this.productosCategoria = posts));
+    this.phoneNumber = this.categoriaService.getPhoneNumber();
   }
 
   setView(item){

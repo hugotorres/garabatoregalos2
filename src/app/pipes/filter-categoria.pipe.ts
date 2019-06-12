@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterCategoriaPipe implements PipeTransform {
 
   transform(value: any, arg: any): any {
-    console.log(value);
+
     if(arg==0) return value;
     const resultFiltered=[];
     for(const item of value){

@@ -4,7 +4,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of} from 'rxjs';
 import { catchError, map, tap,publishReplay, refCount} from 'rxjs/operators';
 
-
 import { Categoria } from './Categoria';
 import { MessageService } from './message.service'
 
@@ -20,6 +19,8 @@ export class CategoriaService {
 private categoriasUrl ='https://garabatoregalos.com/wp49/wp-json/wp/v2/posts';
 private categoriaUrl ='https://garabatoregalos.com/wp49/wp-json/wp/v2/categories';
 
+
+private destacadosUrl='https://garabatoregalos.com/october2/api/destacado';
 private productosOctoberUrl='https://garabatoregalos.com/october2/api/producto';
 
   constructor(
@@ -33,6 +34,18 @@ private productosOctoberUrl='https://garabatoregalos.com/october2/api/producto';
         tap(_ => this.log('fetched categorias')),
         catchError(this.handleError('getCategorias', []))
       );
+  }
+
+  getDestacados(){
+    return this.http.get(this.destacadosUrl)
+    .pipe(map(data=>data),
+      publishReplay(1),
+      refCount()
+    )
+  }
+
+  getPhoneNumber(){
+    return "573045831764";
   }
   setView(item: any): any {
     return this.http.post(this.productosOctoberUrl+'/view/'+item.id,item.id)
