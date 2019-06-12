@@ -7,10 +7,9 @@ var config = {
     host: process.env.FTPHOST,
     port: 21,
     localRoot: __dirname + "/../dist/",
-    remoteRoot: "/",
+    remoteRoot: "/public_html/",
     include: ['*']
 }
-console.log(config);
 ftpDeploy.deploy(config, function(err) {
 
     if (err) console.log(err)
