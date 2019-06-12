@@ -6,18 +6,12 @@ import { HeroesComponent }      from './heroes/heroes.component';
 import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
 import { ProductoDetailComponent }  from './producto-detail/producto-detail.component';
 import { CategoriaComponent }  from './categoria/categoria.component';
-
+import { ContactoComponent }  from './contacto/contacto.component';
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/productos', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'categoria/:id', component: CategoriaComponent },
-
-  { path: 'alcancias/:id', component: CategoriaComponent },
-  { path: 'materas/:id', component: CategoriaComponent },
-  { path: 'portalapices/:id', component: CategoriaComponent },
-  { path: 'otros/:id', component: CategoriaComponent },
-
-  { path: 'producto/:id', component: ProductoDetailComponent },
+  { path: 'contacto', component: ContactoComponent },
+  { path: 'productos', component: CategoriaComponent },
   { path: 'categorias', component: HeroesComponent }
 ];
 

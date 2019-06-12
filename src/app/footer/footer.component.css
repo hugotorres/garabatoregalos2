@@ -7,7 +7,9 @@
 .formulario-contacto .row {
     padding: 10px;
 }
-
+app-footer img {
+  width: 110px;
+}
 .formulario-contacto .col-md-8,
 .datos-contacto {
     padding: 20px;

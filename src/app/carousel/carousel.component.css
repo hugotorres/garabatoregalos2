@@ -1,10 +1,19 @@
 
 .carousel-control-next-icon {
-  
+
     border-left: thin solid black;
 }
 
 .carousel-control-prev-icon {
-  
+
     border-right: thin solid black;
+}
+
+.carousel-control-prev-icon {
+
+   background-color: black;
+}
+
+.carousel span.carousel-control-prev-icon,.carousel span.carousel-control-next-icon  {
+  background: black;
 }

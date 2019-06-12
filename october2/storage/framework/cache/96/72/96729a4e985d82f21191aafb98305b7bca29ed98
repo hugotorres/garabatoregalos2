@@ -1,0 +1,27 @@
+1560201071a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:245:";;
+url = "/"
+==
+{##}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Garabato Regalos</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="{{ ['assets/javascript/bundle.js']|theme }}"></script>
+</body>
+</html>
+";s:5:"mtime";i:1558362089;s:6:"markup";s:228:"{##}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Garabato Regalos</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="{{ ['assets/javascript/bundle.js']|theme }}"></script>
+</body>
+</html>";s:4:"code";N;s:3:"url";s:1:"/";}}

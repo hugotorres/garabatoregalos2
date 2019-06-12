@@ -1,6 +1,6 @@
 
-<div>
-	
+<div class="container">
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" *ngIf="photoArray">
 
   <div class="carousel-inner">
@@ -19,7 +19,7 @@
 </div>
 
 <div *ngIf="photoArray.length <2">
-  <img class="d-block w-100" src="assets/img/{{imagen}}" alt="unique">
+  <img class="d-block w-100" src="assets/img/{{photoArray[0]}}" alt="unique">
 </div>
 
 </div>

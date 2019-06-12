@@ -24,6 +24,8 @@ import { SocialMediaComponent } from './social-media/social-media.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { SecondNavigationComponent } from './second-navigation/second-navigation.component';
 import { StripComponent } from './strip/strip.component';
+import { FilterCategoriaPipe } from './pipes/filter-categoria.pipe';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   imports: [
@@ -55,7 +57,9 @@ import { StripComponent } from './strip/strip.component';
     SocialMediaComponent,
     CarouselComponent,
     SecondNavigationComponent,
-    StripComponent
+    StripComponent,
+    FilterCategoriaPipe,
+    ContactoComponent
   ],
   bootstrap: [ AppComponent ],
 

@@ -1,5 +1,7 @@
 /* Master Styles */
-
+body{
+  background: #aaaaaa33 url(assets/img/fondo.png);
+}
 .row {
     margin: 0px !important;
 }
@@ -9,9 +11,10 @@
 }
 
 .starred img {
-    height: 80vh;
-    width: auto !important;
-    margin: 0 auto;
+  height: 45vh;
+  width: auto !important;
+  max-width: 100vw;
+  margin: 0 auto;
 }
 
 nav a,
@@ -27,7 +30,7 @@ h3,
 }
 
 .modal-lg {
-    max-width: 1140px !important;
+    max-width: 750px !important;
 }
 
 h1 {
