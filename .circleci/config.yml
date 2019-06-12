@@ -36,3 +36,5 @@ jobs:
 
       # run tests!
       - run: npm run build
+      - run: node .circleci/deploy.js
+      - run: echo "WE'RE ONLINE"
