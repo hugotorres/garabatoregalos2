@@ -19,7 +19,6 @@
             <div *ngFor="let producto of productosCategoria | filterCategoria:filtroCategoria " class="col-sm-4 producto" data-aos="fade-up" data-aos-offset="10" data-aos-easing="ease-in-sine">
                 <div class="imagen-producto" (click)="selectProductHandler(producto)">
                     <img src="{{mediaUrl}}{{producto.imagen}}" alt="{{producto.descripcion}}" class="product-image" data-toggle="modal" data-target="#exampleModal">
-                    <div class="product-description-grid">{{producto.titulo}}</div>
                     <div class="slider-image-div" *ngIf="producto.destacado"></div>
                     <div class="precio hidden">
                         $ {{producto.precio|number}} X unidad
@@ -54,14 +53,14 @@
 
                             <div class="carousel-inner">
                                 <div class="carousel-item active" *ngIf="selectedProduct.imagen">
-                                    <img class="imagen-slider" src="{{mediaUrl}}{{selectedProduct.imagen}}" alt="First slide">
+                                    <img class="imagen-slider" src="{{mediaUrl}}{{selectedProduct.imagen}}" alt="{{selectedProduct.titulo}}">
                                     <div class="slider-image-div" *ngIf="selectedProduct.destacado"></div>
                                 </div>
                                 <div class="carousel-item " *ngIf="selectedProduct.imagen2">
-                                    <img class="imagen-slider" src="{{mediaUrl}}{{selectedProduct.imagen2}}" alt="second slide">
+                                    <img class="imagen-slider" src="{{mediaUrl}}{{selectedProduct.imagen2}}" alt="{{selectedProduct.titulo}}">
                                 </div>
                                 <div class="carousel-item " *ngIf="selectedProduct.imagen3">
-                                    <img class="imagen-slider" src="{{mediaUrl}}{{selectedProduct.imagen3}}" alt="third slide">
+                                    <img class="imagen-slider" src="{{mediaUrl}}{{selectedProduct.imagen3}}" alt="{{selectedProduct.titulo}}">
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleIndicatorsmodal" role="button" data-slide="prev" *ngIf="selectedProduct.imagen2">
