@@ -27,6 +27,7 @@ import { StripComponent } from './strip/strip.component';
 import { FilterCategoriaPipe } from './pipes/filter-categoria.pipe';
 import { ContactoComponent } from './contacto/contacto.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   imports: [
@@ -61,7 +62,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     SecondNavigationComponent,
     StripComponent,
     FilterCategoriaPipe,
-    ContactoComponent
+    ContactoComponent,
+    SpinnerComponent
   ],
   bootstrap: [ AppComponent ],
 
