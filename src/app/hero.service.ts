@@ -16,21 +16,21 @@ export class HeroService {
 
   private heroesUrl = 'https://my-json-server.typicode.com/hugotorres/garabatoregalos2/categorias';  // URL to web api
   private destacadosUrl = 'https://my-json-server.typicode.com/hugotorres/garabatoregalos2/destacados';
-  private wpProductUrl ="http://garabatoregalos.com/backend/wp-json/wp/v2/posts";
-  private jsonFileCategories = "./assets/categoriesjson.json";
-  private jsonFileDestacados = "./assets/destacadosjson.json";
+  private wpProductUrl = 'http://garabatoregalos.com/backend/wp-json/wp/v2/posts';
+  private jsonFileCategories = './assets/categoriesjson.json';
+  private jsonFileDestacados = './assets/destacadosjson.json';
   constructor(
     private http: HttpClient,
     private messageService: MessageService) { }
 
   /** GET heroes from the server */
-  getCategoriesFromJson (){
+  getCategoriesFromJson () {
     return this.http.get(this.jsonFileCategories)
     .pipe(
       catchError(this.handleError('getCategoriesFromJson', []))
     );
   }
-  getDestacadosFromJson (){
+  getDestacadosFromJson () {
     return this.http.get(this.jsonFileCategories)
     .pipe(
       catchError(this.handleError('getDestacadosFromJson', []))
@@ -50,7 +50,7 @@ export class HeroService {
         catchError(this.handleError('getDestacados', []))
       );
   }
-  getFromWordpress (){
+  getFromWordpress () {
     return this.http.get(this.destacadosUrl)
       .pipe(
         tap(_ => this.log('fetched destacados')),
@@ -75,7 +75,7 @@ export class HeroService {
         catchError(this.handleError<Hero>(`getHero id=${id}`))
       );
   }
-  getProductosPorCategoria(id:Number): Observable<Hero[]>{
+  getProductosPorCategoria(id: Number): Observable<Hero[]> {
     return this.http.get<Hero[]>(this.jsonFileCategories)
     .pipe(
       catchError(this.handleError('getproductosporcategoriaFromJson', []))
@@ -86,12 +86,12 @@ export class HeroService {
   getHero(id: number): Observable<Hero> {
     const url = `${this.heroesUrl}/${id}`;
     return this.http.get<Hero>(url).pipe(
-      //tap(_ => this.log(`fetched hero id=${id}`)),
+      // tap(_ => this.log(`fetched hero id=${id}`)),
       catchError(this.handleError<Hero>(`getHero id=${id}`))
     );
   }
     /** GET category from wordpress by id. Will 404 if id not found */
-    getWpCategory(id: number){
+    getWpCategory(id: number) {
       const url = `${this.heroesUrl}/${id}`;
       return this.http.get(url).pipe(
         tap(_ => this.log(`fetched hero id=${id}`)),

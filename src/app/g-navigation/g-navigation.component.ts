@@ -11,7 +11,7 @@ export class GNavigationComponent implements OnInit {
   constructor(private router: Router) {
    }
    isActiveUrl(condition): boolean {
-    return  this.router.url==="/"+condition;
+    return  this.router.url === '/' + condition;
   }
 
   ngOnInit() {

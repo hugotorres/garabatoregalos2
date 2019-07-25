@@ -118,18 +118,7 @@
         float: right;
     }
     
-    .close:focus,
-    .close:hover {
-        color: #000;
-        text-decoration: none;
-        opacity: .75;
-        margin-top: -13px !important;
-        padding-top: 2px;
-        margin: -2px !important;
-        padding: 3px !important;
-        margin-top: 2px;
-    }
-    
+ 
     @media screen and (max-width: 450px) {
         h3.menu-productos {
             float: none;

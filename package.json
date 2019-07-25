@@ -28,6 +28,7 @@
     "@angular/upgrade": "^7.2.15",
     "@ng-bootstrap/ng-bootstrap": "^4.2.1",
     "angular-in-memory-web-api": "github:brandonroberts/in-memory-web-api-bazel#50a34d8",
+    "codelyzer": "^5.1.0",
     "core-js": "^2.6.9",
     "rxjs": "^6.5.2",
     "zone.js": "~0.8.26"

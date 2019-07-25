@@ -2,8 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Hero }         from '../hero';
-import { HeroService }  from '../hero.service';
+import { Hero } from '../hero';
+import { HeroService } from '../hero.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -13,8 +13,8 @@ import { Observable } from 'rxjs';
 })
 export class HeroDetailComponent implements OnInit {
   @Input() hero: Hero;
-  selectedProduct:Hero;
-  @Input() productosCategoria:Hero;
+  selectedProduct: Hero;
+  @Input() productosCategoria: Hero;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,20 +24,20 @@ export class HeroDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.getHero();
-    //this.getProductsByCategory();
+    // this.getProductsByCategory();
   }
 
-  getProductsByCategory(){
+  getProductsByCategory() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.heroService.getProductosPorCategoria(id)
-      .subscribe(productos=>
+      .subscribe(productos =>
         this.productosCategoria = productos[id]
        );
   }
 
-  findIdInArray(productos,id){
+  findIdInArray(productos, id) {
     return productos.forEach(element => {
-      if(element.id === id) {
+      if ( element.id === id) {
         return element;
       }
     });
@@ -48,8 +48,8 @@ export class HeroDetailComponent implements OnInit {
     this.heroService.getHero(id)
       .subscribe(hero => this.hero = hero);
   }
-  selectProductHandler(producto){
-  this.selectedProduct=producto;
+  selectProductHandler(producto) {
+  this.selectedProduct = producto;
   }
 
   goBack(): void {

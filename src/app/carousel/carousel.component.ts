@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
@@ -6,17 +6,17 @@ import { Component, OnInit,Input } from '@angular/core';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
-@Input() imagenes:any;
-photoArray:[];
+@Input() imagenes: any;
+photoArray: [];
   constructor() { }
 
   ngOnInit() {
-  this.photoArray=this.imagenes.split(",");
+  this.photoArray = this.imagenes.split(',');
   }
 
 
   ngOnChanges() {
-this.photoArray=this.imagenes.split(",");
+this.photoArray = this.imagenes.split(',');
   }
 
 }

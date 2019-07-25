@@ -1,0 +1,74 @@
+<!-- Modal -->
+<div data-aos="fade-up-left" class="modal fade in" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content container-fluid" *ngIf="selectedProduct">
+            <div class="modal-header bg-dark">
+                <h5 class="modal-title text-center" id="exampleModalLongTitle">{{selectedProduct.titulo}}</h5>
+                <a routerLink="/productos">
+                    <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </a>
+            </div>
+            <div class="modal-body container row" style="padding: 0 !important">
+                <div class="col-sm-7">
+                    <div style="max-height:550px">
+                        <div id="carouselExampleIndicatorsmodal" class="carousel slide" data-ride="carousel">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" *ngIf="selectedProduct.imagen">
+                                    <img class="imagen-slider" src="{{mediaUrl}}{{selectedProduct.imagen}}" alt="{{selectedProduct.titulo}}">
+                                    <div class="slider-image-div" *ngIf="selectedProduct.destacado"></div>
+                                </div>
+                                <div class="carousel-item " *ngIf="selectedProduct.imagen2">
+                                    <img class="imagen-slider" src="{{mediaUrl}}{{selectedProduct.imagen2}}" alt="{{selectedProduct.titulo}}">
+                                </div>
+                                <div class="carousel-item " *ngIf="selectedProduct.imagen3">
+                                    <img class="imagen-slider" src="{{mediaUrl}}{{selectedProduct.imagen3}}" alt="{{selectedProduct.titulo}}">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicatorsmodal" role="button" data-slide="prev" *ngIf="selectedProduct.imagen2">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicatorsmodal" role="button" data-slide="next" *ngIf="selectedProduct.imagen2">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5 text-center text-bottom">
+                    <ngb-accordion [closeOthers]="true" #acc="ngbAccordion" activeIds="config-panel-one">
+                        <ngb-panel title="Descripcion" id="config-panel-one">
+                            <ng-template ngbPanelContent>
+                                {{selectedProduct.descripcion}}
+                            </ng-template>
+                        </ngb-panel>
+                        <!-- <ngb-panel title="Observaciónes">
+                          <ng-template ngbPanelContent>
+                              Este producto ha sido pintado a mano usando pinturas acrilicas de primera calidad, asi como resinas epoxicas para aumentar tu durabilidad y facilitar su limpieza.
+
+
+                          </ng-template>
+                      </ngb-panel>-->
+                    </ngb-accordion>
+                    <div class="modal-price bg-dark" *ngIf="selectedProduct.precio">
+                        $ {{selectedProduct.precio}} X unidad
+                        <div class="boton-pago" [innerHTML]="selectedProduct.boton_pago"></div>
+                    </div>
+                    <div class="modal-price bg-dark" *ngIf="!selectedProduct.precio">
+                        Cotizar
+                        <div class="boton-pago">
+                            <a href="https://api.whatsapp.com/send?phone={{phoneNumber}}&text=Estoy%20interesado%20en%20el%20producto {{selectedProduct.titulo}}" target="_blank">
+                         x Whatsapp
+                        </a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="price-tag"></div>
+            </div>
+        </div>
+    </div>
+</div>

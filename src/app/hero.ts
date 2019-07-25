@@ -1,6 +1,6 @@
 export class Hero {
   id: number;
   name: string;
-  tag:string;
+  tag: string;
   productos: any;
 }

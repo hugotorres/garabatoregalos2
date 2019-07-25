@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input,Renderer2,ElementRef,ViewChild} from '@angular/core';
+import { Component, OnInit , Input, Renderer2, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-strip',
@@ -6,8 +6,8 @@ import { Component, OnInit ,Input,Renderer2,ElementRef,ViewChild} from '@angular
   styleUrls: ['./strip.component.css']
 })
 export class StripComponent implements OnInit {
-  @ViewChild ("strip") strip: ElementRef;
-  @ViewChild ("stripClose") stripClose: ElementRef;
+  @ViewChild ('strip') strip: ElementRef;
+  @ViewChild ('stripClose') stripClose: ElementRef;
   @Input() titulo;
   @Input() contenido;
   expanded = false;
@@ -15,20 +15,20 @@ export class StripComponent implements OnInit {
 
   ngOnInit() {
   }
-  open():void{
-    if(!this.expanded){
-      this.renderer.addClass(this.strip.nativeElement.parentNode, "strips__strip--expanded");
-      this.renderer.addClass(this.stripClose.nativeElement,"strip__close--show");
+  open(): void {
+    if (!this.expanded) {
+      this.renderer.addClass(this.strip.nativeElement.parentNode, 'strips__strip--expanded');
+      this.renderer.addClass(this.stripClose.nativeElement, 'strip__close--show');
       console.log('abriendo');
-      this.expanded=true;
+      this.expanded = true;
     }
   }
 
-  close():void{
-    if(this.expanded){
-      this.renderer.removeClass(this.strip.nativeElement.parentNode, "strips__strip--expanded");
-      this.renderer.removeClass(this.stripClose.nativeElement,"strip__close--show");
-      this.expanded=false;
+  close(): void {
+    if (this.expanded) {
+      this.renderer.removeClass(this.strip.nativeElement.parentNode, 'strips__strip--expanded');
+      this.renderer.removeClass(this.stripClose.nativeElement, 'strip__close--show');
+      this.expanded = false;
     }
     console.log('cerrando');
   }

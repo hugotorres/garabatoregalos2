@@ -28,6 +28,7 @@ import { FilterCategoriaPipe } from './pipes/filter-categoria.pipe';
 import { ContactoComponent } from './contacto/contacto.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { GarabatoModalComponent } from './garabato-modal/garabato-modal.component';
 
 @NgModule({
   imports: [
@@ -63,7 +64,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
     StripComponent,
     FilterCategoriaPipe,
     ContactoComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    GarabatoModalComponent
   ],
   bootstrap: [ AppComponent ],
 

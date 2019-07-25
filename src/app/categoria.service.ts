@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, of} from 'rxjs';
-import { catchError, map, tap,publishReplay, refCount} from 'rxjs/operators';
+import { catchError, map, tap, publishReplay, refCount} from 'rxjs/operators';
 
 import { Categoria } from './categoria';
-import { MessageService } from './message.service'
+import { MessageService } from './message.service';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -16,12 +16,12 @@ export class CategoriaService {
 
 
  // private categoriasUrl = 'https://my-json-server.typicode.com/hugotorres/garabatoregalos2/categorias';  // URL to web api
-private categoriasUrl ='https://garabatoregalos.com/wp49/wp-json/wp/v2/posts';
-private categoriaUrl ='https://garabatoregalos.com/wp49/wp-json/wp/v2/categories';
+private categoriasUrl = 'https://garabatoregalos.com/wp49/wp-json/wp/v2/posts';
+private categoriaUrl = 'https://garabatoregalos.com/wp49/wp-json/wp/v2/categories';
 
 
-private destacadosUrl='https://garabatoregalos.com/october2/api/destacado';
-private productosOctoberUrl='https://garabatoregalos.com/october2/api/producto';
+private destacadosUrl = 'https://garabatoregalos.com/october2/api/destacado';
+private productosOctoberUrl = 'https://garabatoregalos.com/october2/api/producto';
 
   constructor(
     private http: HttpClient,
@@ -36,43 +36,51 @@ private productosOctoberUrl='https://garabatoregalos.com/october2/api/producto';
       );
   }
 
-  getDestacados(){
+  getDestacados() {
     return this.http.get(this.destacadosUrl)
-    .pipe(map(data=>data),
+    .pipe(map(data => data),
       publishReplay(1),
       refCount()
-    )
+    );
   }
 
-  getPhoneNumber(){
-    return "573045831764";
+  getPhoneNumber() {
+    return '573045831764';
+  }
+
+  getProduct(item) {
+    return this.http.post(this.productosOctoberUrl + '/view/' + item.id, item.id)
+    .pipe(
+      tap(_ => this.log('fetched product')),
+      catchError(this.handleError('getProduct', []))
+    );
   }
   setView(item: any): any {
-    return this.http.post(this.productosOctoberUrl+'/view/'+item.id,item.id)
+    return this.http.post(this.productosOctoberUrl + '/view/' + item.id, item.id)
     .pipe(
       tap(_ => this.log('fetched categorias')),
       catchError(this.handleError('getCategorias', []))
     );
   }
-  getPostsByCategory(id:number): Observable<Categoria[]>{
-    return this.http.get<Categoria[]>(this.categoriasUrl+'?categories='+id)
-    //return this.http.get<Categoria[]>(this.categoriasUrl)
+  getPostsByCategory(id: number): Observable<Categoria[]> {
+    return this.http.get<Categoria[]>(this.categoriasUrl + '?categories=' + id)
+    // return this.http.get<Categoria[]>(this.categoriasUrl)
     .pipe( );
   }
 
 
 
-  public getAllPosts():Observable<Categoria[]>{
-    let datos= this.http.get<Categoria[]>(this.categoriasUrl)
+  public getAllPosts(): Observable<Categoria[]> {
+    const datos = this.http.get<Categoria[]>(this.categoriasUrl)
     .pipe(map(data => data),
     publishReplay(1), // this tells Rx to cache the latest emitted
     refCount() );
     return datos;
   }
-  getData():Observable<Categoria[]>{
-    let data = this.http.get<Categoria[]>(this.productosOctoberUrl)
-    .pipe(map(data=>data)
-    ,publishReplay(1),
+  getData(): Observable<Categoria[]> {
+    const data = this.http.get<Categoria[]>(this.productosOctoberUrl)
+    .pipe(map(data => data)
+    , publishReplay(1),
     refCount());
     return data;
   }
@@ -92,7 +100,7 @@ private productosOctoberUrl='https://garabatoregalos.com/october2/api/producto';
   }
 
   /** GET hero by id. Will 404 if id not found */
-  getCategoria(id: number):Observable<Categoria>{
+  getCategoria(id: number): Observable<Categoria> {
     const url = `${this.categoriasUrl}/${id}`;
     return this.http.get<Categoria>(url).pipe(
       tap(_ => this.log(`fetched categoria id=${id}`)),

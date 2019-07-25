@@ -5,69 +5,88 @@ import { Router } from '@angular/router';
 
 import { Categoria } from '../categoria';
 import { CategoriaService } from '../categoria.service';
+declare var $: any;
 @Component({
-	selector: 'app-categoria',
-	templateUrl: './categoria.component.html',
-	styleUrls: [ './categoria.component.css' ]
+  selector: 'app-categoria',
+  templateUrl: './categoria.component.html',
+  styleUrls: [ './categoria.component.css' ]
 })
 export class CategoriaComponent implements OnInit {
-	@Input() categoria: Categoria;
+  @Input() categoria: Categoria;
   @Input() hero: Categoria;
-  mediaUrl="https://www.garabatoregalos.com/october2/storage/app/media";
-	nombreCategoria;
-	selectedProduct;
+  mediaUrl = 'https://www.garabatoregalos.com/october2/storage/app/media';
+  nombreCategoria;
+  selectedProduct;
   filtroCategoria = 0;
   setViewResponse;
   phoneNumber;
-	@Input() productosCategoria: Categoria[];
+  @Input() productosCategoria: Categoria[];
 
-	constructor(
-		private route: ActivatedRoute,
-		private categoriaService: CategoriaService,
-		private location: Location,
-		private router: Router
-	) {}
+  constructor(
+    private route: ActivatedRoute,
+    private categoriaService: CategoriaService,
+    private location: Location,
+    private router: Router
+  ) {}
 
-	ngOnInit(): void {
-		//this.getCategoria();
+  ngOnInit(): void {
+    // this.getCategoria();
     this.getPostByCategory();
-
-		this.nombreCategoria = this.route.url['value'][0].path;
-	}
-	setCategory(category) {
-		this.filtroCategoria = category;
+    this.cargarProductoUrl(this.route.snapshot.paramMap.get('id'));
+    this.nombreCategoria = this.route.url['value'][0].path;
+  }
+  cargarProductoUrl(id) {
+    if (id) {
+      this.getSelectedProduct({'id': id});
+      $('#exampleModal').modal('toggle');
+    }
   }
 
-	getPostByCategory(): void {
-		const id = +this.route.snapshot.paramMap.get('id');
-    //this.categoriaService.getAllPosts().subscribe((posts) => (this.productosCategoria = posts));
+  setCategory(category) {
+    this.filtroCategoria = category;
+  }
+
+  getPostByCategory(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    // this.categoriaService.getAllPosts().subscribe((posts) => (this.productosCategoria = posts));
     this.categoriaService.getData().subscribe((posts) => (this.productosCategoria = posts));
     this.phoneNumber = this.categoriaService.getPhoneNumber();
   }
 
-  setView(item){
-    this.categoriaService.setView(item).subscribe((response)=>this.setViewResponse=response);
+
+   slugify(string) {
+    const a = 'àáäâãåăæąçćčđèéėëêęǵḧìíïîįłḿǹńňñòóöôœøṕŕřßśšșťțùúüûǘůűūųẃẍÿýźžż·/_,:;';
+    const b = 'aaaaaaaaacccdeeeeeeghiiiiilmnnnnooooooprrssssttuuuuuuuuuwxyyzzz------';
+    const p = new RegExp(a.split('').join('|'), 'g');
+    return string.toString().toLowerCase()
+      .replace(/\s+/g, '-') // Replace spaces with -
+      .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
+      .replace(/&/g, '-and-') // Replace & with ‘and’
+      .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+      .replace(/\-\-+/g, '-') // Replace multiple - with single -
+      .replace(/^-+/, '') // Trim - from start of text
+      .replace(/-+$/, ''); // Trim - from end of text
   }
 
-	getCategoria(): void {
-		const id = +this.route.snapshot.paramMap.get('id');
-		this.categoriaService.getCategoria(id).subscribe((categorias) => (this.categoria = categorias));
-	}
-	selectProductHandler(producto) {
-    this.setView(producto);
-		this.selectedProduct = producto;
-	}
-	isActiveUrl(condition) {
-	return 	this.filtroCategoria===condition;
-	}
 
-	goBack(): void {
-		this.location.back();
-	}
-	/*
-   save(): void {
-      this.heroService.updateCategoria(this.categoria)
-        .subscribe(() => this.goBack());
-    }
-    */
+  getSelectedProduct(item) {
+    this.categoriaService.getProduct(item).subscribe((response) => this.selectedProduct = response);
+  }
+  getCategoria(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.categoriaService.getCategoria(id).subscribe((categorias) => (this.categoria = categorias));
+  }
+  selectProductHandler(producto) {
+    this.selectedProduct = producto;
+    $('#exampleModal').modal('toggle');
+    this.categoriaService.setView(producto).subscribe((response) => console.log(response));
+  }
+  isActiveUrl(condition) {
+  return 	this.filtroCategoria === condition;
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
+
 }
