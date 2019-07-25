@@ -10,6 +10,14 @@ app-destacados section div {
     /* IE6-9 */
 }
 
+span.carousel-control-prev-icon,
+span.carousel-control-next-icon {
+    background-color: #00000054;
+    /* border: thin solid #2a0b0b; */
+    border-radius: 4px;
+    padding: 4px;
+}
+
 h3.texto-destacado:hover {
     background: black;
     transform: skew(5deg);
