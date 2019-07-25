@@ -3,23 +3,23 @@
         background: lightgrey;
     }
     /* HeroDetailComponent's private CSS styles */
-    
+
     .hidden {
         display: none;
     }
-    
+
     img.product-image:hover {
-        transform: skew(1deg);
+        opacity: 0.9;
         cursor: pointer;
     }
-    
+
     h3.menu-productos {
         float: left;
         width: 15%;
         clear: both;
         cursor: pointer;
     }
-    
+
     a.carousel-control-next,
     a.carousel-control-prev {
         background-color: #00000061 !important;
@@ -29,23 +29,23 @@
         border-radius: 50%;
         /* padding: 10px; */
     }
-    
+
     .footer .container {
         background-color: #343a40 !important;
     }
-    
+
     img.product-image {
         width: 100%;
         /* height: 350px;*/
     }
-    
+
     .description {
         /* border-bottom: thin solid grey; */
         padding: 20px;
         text-align: left;
         background: #5f5f3e17;
     }
-    
+
     .precio,
     .modal-price {
         background-color: #343a40 !important;
@@ -58,7 +58,7 @@
         text-shadow: black 1px -1px;
         font-weight: bold;
     }
-    
+
     .modal-header {
         text-align: center;
         /*  background: black;
@@ -72,32 +72,32 @@
         box-shadow: rgb(185, 198, 1) 5px 7px;
         */
     }
-    
+
     .slider-image-div {
         background: white;
     }
-    
+
     .container-fluid {
         width: 100%;
         padding-right: 0px;
         padding-left: 0px;
     }
-    
+
     img.imagen-slider {
         height: 330px;
     }
-    
+
     h3.menu-productos:hover {
         padding-left: 10px;
         transition: all 0.3s;
     }
-    
+
     h5#exampleModalLongTitle {
         font-family: 'Amatic SC', cursive;
         color: rgb(185, 198, 1);
         font-weight: bold;
     }
-    
+
     .boton-pago a {
         color: #ffffff;
         background: mediumseagreen;
@@ -108,34 +108,33 @@
         font-weight: lighter;
         font-family: 'Amatic SC', cursive;
     }
-    
+
     h3.menu-productos.active {
         font-weight: bold;
         border-bottom: 4px solid #0000034d;
     }
-    
+
     .boton-pago {
         float: right;
     }
-    
- 
+
     @media screen and (max-width: 450px) {
         h3.menu-productos {
             float: none;
             width: 100%;
         }
     }
-    
+
     .product-image {
-        border-radius: 20px;
+        border-radius: 20px 20px 0px 0px;
         transition: all 1s;
     }
-    
+
     .lista-productos {
         min-height: 500px;
         padding-top: 20px;
     }
-    
+
     label {
         display: inline-block;
         width: 3em;
@@ -143,25 +142,25 @@
         color: #607D8B;
         font-weight: bold;
     }
-    
+
     input {
         height: 2em;
         font-size: 1em;
         padding-left: .4em;
     }
-    
+
     .col-sm-4.producto {
         min-height: 270px;
         padding: 20px;
         text-align: center;
     }
-    
+
     a.carousel-control-prev,
     a.carousel-control-next {
         /* border: thin solid black; */
         background-color: #00000024;
     }
-    
+
     .imagen-producto {
         margin-bottom: 30px;
     }
