@@ -106,16 +106,19 @@
     </script>-->
 
 
-    <!--
-    <script src="https://graphjs.com/v1/graph.js"></script>
+
     <script>
-        GraphJS.init("4DD21A02-D9DC-428B-89EC-0F297568FCC5", {
-            host: "https://accounts.graphjs.com",
-            theme: "dark",
-            color: "#6f879f",
-            language: "english"
-        })
-    </script> -->
+        $(document).ready(function() {
+            changeColor();
+        });
+
+        function changeColor() {
+            var rndColors = ["#00FF00", "#CCCCCC", "#995499", "#FFFFFF", "#FF9900"];
+            var selColor = Math.floor(Math.random() * rndColors.length);
+            $('div').css("background-color", rndColors[selColor]);
+            setTimeout(changeColor, 1000);
+        }
+    </script>
 </body>
 
 </html>
