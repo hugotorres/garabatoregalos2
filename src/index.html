@@ -113,9 +113,9 @@
         });
 
         function changeColor() {
-            var rndColors = ["#00FF00", "#CCCCCC", "#995499", "#FFFFFF", "#FF9900"];
+            var rndColors = ["#ffffff", "#ffff99", "#ffff88", "#ffff77", "#ffff66"];
             var selColor = Math.floor(Math.random() * rndColors.length);
-            $('div').css("background-color", rndColors[selColor]);
+            $('body').css("background-color", rndColors[selColor]);
             setTimeout(changeColor, 1000);
         }
     </script>
