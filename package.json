@@ -1,8 +1,8 @@
 {
     "name": "garabato-regalos",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "private": true,
-    "description": "Example project from an angular.io guide.",
+    "description": "Grabato Regalos website.",
     "scripts": {
         "lint": "tslint ./src/**/*.ts -t verbose",
         "start": "ng serve",
@@ -12,8 +12,8 @@
         "ng": "ng",
         "dev": "parcel src/index.html"
     },
-    "keywords": [],
-    "author": "",
+    "keywords": ["Garabato Regalos", "angular", ""],
+    "author": "Hugo torres",
     "license": "MIT",
     "dependencies": {
         "@angular/animations": "^7.2.15",
